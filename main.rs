@@ -1,7 +1,8 @@
 use std::{io, env};
 
 fn main() {
-    println!("Please enter some text:");
+    let key="DEBUG";
+    println!("Please enter text for DEBUG env variable:");
 
     // Create a mutable string to store the input.
     let mut input = String::new();
@@ -11,8 +12,8 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read line");
 
-    // Print the input back to the user. The read line includes the newline character.
-    println!("You entered: {}", input);
+// set the debug environment variable
+    env::set_var(key,input);
 
     // print the current environment variables
     
