@@ -13,4 +13,15 @@ fn main() {
 
     // Print the input back to the user. The read line includes the newline character.
     println!("You entered: {}", input);
+
+    // print the current environment variables
+    
+    println!("All environment variables:");
+    for (key, value) in env::vars() {
+        println!("{}: {}", key, value);
+    }
+
+
+    
 }
+
